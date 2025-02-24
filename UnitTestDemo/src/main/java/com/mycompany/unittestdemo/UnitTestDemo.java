@@ -1,7 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package com.mycompany.unittestdemo;
 
 /**
@@ -10,8 +9,13 @@ package com.mycompany.unittestdemo;
  */
 public class UnitTestDemo {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-        System.out.println("Hello Vietnam");
+    public static double Power(double x, int n) {
+        if (n == 0) {
+            return 1.0;
+        } else if (n > 0) {
+            return n * Power(x, n - 1);
+        } else {
+            return Power(x, n + 1) / x;
+        }
     }
 }
